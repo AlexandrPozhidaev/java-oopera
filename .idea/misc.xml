@@ -63,7 +63,9 @@
       </profile-state>
     </entry>
   </component>
+<<<<<<< HEAD
   <component name="ProjectRootManager" version="2" languageLevel="JDK_21" default="true" project-jdk-name="corretto-21" project-jdk-type="JavaSDK">
+>>>>>>> 48b5b6a79229c47a984a615476697b27d8845b35
     <output url="file://$PROJECT_DIR$/out" />
   </component>
   <component name="ProjectType">
