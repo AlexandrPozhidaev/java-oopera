@@ -2,13 +2,15 @@ import java.util.ArrayList;
 
 public class Show {
 
-    String title;
-    int duration;  //в минутах
+    public String title;
+    public int duration;
+    Director director;
     ArrayList<Actor> listOfActors;
 
-    public Show(String title, int duration, ArrayList<Actor> listOfActors) {
+    public Show(String title, int duration, Director director, ArrayList<Actor> listOfActors) {
         this.title = title;
         this.duration = duration;
+        this.director = director;
         this.listOfActors = listOfActors;
     }
 
@@ -18,15 +20,30 @@ public class Show {
         }
     }
 
-    public void addActor(Actor actor) {
-        listOfActors.add(actor);
+    public void addActor(Actor newActor) {
+        for (Actor actor : listOfActors) {
+            if (actor.getName().equals(newActor.getName()) &&
+                    actor.getSurname().equals(newActor.getSurname()) &&
+                    actor.getHeight() == newActor.getHeight()) {
+                System.out.println("Такой актер уже добавлен");
+                return;
+            }
+        }
+        listOfActors.add(newActor);
     }
 
-    public void replaceActor(Actor oldActor, Actor newActor) {
-        int index = listOfActors.indexOf(oldActor);
-        if (index != -1) {
-            listOfActors.remove(index);
-            listOfActors.add(newActor);
+    public void replaceActor(Actor newActor, String oldActorSurname) {
+        boolean replace = false;
+        for (int i = 0; i < listOfActors.size(); i++) {
+            Actor currentActor = listOfActors.get(i);
+            if (currentActor.getSurname().equals(oldActorSurname)) {
+                listOfActors.set(i, newActor);
+                replace = true;
+                break;
+            }
+        }
+        if (!replace) {
+            System.out.println("Актер с предложенной фамилией отсутствует");
         }
     }
 }

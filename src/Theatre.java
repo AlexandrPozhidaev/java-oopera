@@ -11,15 +11,15 @@ public class Theatre {
         Director director1 = new Director("Артем", "Анин", Gender.MALE, 10);
         Director director2 = new Director("Анна", "Артемова", Gender.FEMALE, 15);
 
-        String musicAuthor = MusicalShow.musicAuthor;
+        MusicAuthor musicAuthor = new MusicAuthor("Виктория", "Филиппова", Gender.FEMALE);
 
-        String choreographer = Ballet.choreographer;
+        Choreographer choreographer = new Choreographer("Жанна", "Танцева", Gender.FEMALE);
 
         ArrayList<Actor> listOfActorsShow = new ArrayList<>();
         ArrayList<Actor> listOfActorsOpera = new ArrayList<>();
         ArrayList<Actor> listOfActorsBallet = new ArrayList<>();
 
-        Show show = new Show("Обычный спектакль", 60, listOfActorsShow);
+        Show show = new Show("Обычный спектакль", 60, director1, listOfActorsShow);
         Opera opera = new Opera("Оперный спектакль", 120, director2, listOfActorsOpera, musicAuthor,
                 "(Текст либретто оперы) для вывода", 7);
         Ballet ballet = new Ballet("Балетный спектакль", 180, director1, listOfActorsBallet, musicAuthor,
@@ -28,6 +28,7 @@ public class Theatre {
         show.addActor(actor1);
         show.addActor(actor2);
 
+        opera.addActor(actor1);
         opera.addActor(actor2);
         opera.addActor(actor3);
 
@@ -46,16 +47,14 @@ public class Theatre {
         ballet.printActors();
         System.out.println();
 
-        show.replaceActor(actor2, actor3);
+        show.replaceActor(actor3, "Петров");
+        System.out.println();
 
         System.out.println("Актёры в обычном спектакле после замены:");
         show.printActors();
-
-        opera.replaceActor(actor1, actor3);
         System.out.println();
 
-        System.out.println("Актёры в оперном спектакле после попытки замены:");
-        opera.printActors();
+        ballet.replaceActor(actor1, "Никифорова");
         System.out.println();
 
         opera.printLibrettoText();
