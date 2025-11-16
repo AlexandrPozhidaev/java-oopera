@@ -1,6 +1,8 @@
-package team;
+package implementation;
 
-import implementation.Show;
+import team.Actor;
+import team.Director;
+import team.MusicAuthor;
 
 import java.util.ArrayList;
 
