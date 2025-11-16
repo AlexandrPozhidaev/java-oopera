@@ -1,10 +1,12 @@
+package team;
+
 public class Person {
 
-    public String name;
-    public String surname;
-    public Gender gender;
+    protected String name;
+    protected String surname;
+    protected Gender gender;
 
-    public Person(String name, String surname, Gender gender) {
+    protected Person(String name, String surname, Gender gender) {
         this.name = name;
         this.surname = surname;
         this.gender = gender;
@@ -12,7 +14,7 @@ public class Person {
 
     @Override
     public String toString() {
-        return "Person{" +
+        return "team.Person{" +
                 "name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
                 ", gender=" + gender +

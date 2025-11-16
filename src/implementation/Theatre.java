@@ -1,3 +1,7 @@
+package implementation;
+
+import team.*;
+
 import java.util.ArrayList;
 
 public class Theatre {
@@ -11,9 +15,9 @@ public class Theatre {
         Director director1 = new Director("Артем", "Анин", Gender.MALE, 10);
         Director director2 = new Director("Анна", "Артемова", Gender.FEMALE, 15);
 
-        MusicAuthor musicAuthor = new MusicAuthor("Виктория", "Филиппова", Gender.FEMALE);
+        MusicAuthor musicAuthor = new MusicAuthor("Виктория", "Музыкова", Gender.FEMALE);
 
-        Choreographer choreographer = new Choreographer("Жанна", "Танцева", Gender.FEMALE);
+        Choreographer choreographer = new Choreographer("Жанна", "Танцуева", Gender.FEMALE);
 
         ArrayList<Actor> listOfActorsShow = new ArrayList<>();
         ArrayList<Actor> listOfActorsOpera = new ArrayList<>();

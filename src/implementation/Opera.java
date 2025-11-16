@@ -1,9 +1,15 @@
+package implementation;
+
+import team.Actor;
+import team.Director;
+import team.MusicAuthor;
+import team.MusicalShow;
+
 import java.util.ArrayList;
 
 public class Opera extends MusicalShow {
 
-    public int choirSize;
-    MusicAuthor musicAuthor;
+    int choirSize;
 
     public Opera(String title, int duration, Director director, ArrayList<Actor> listOfActors, MusicAuthor musicAuthor,
                  String librettoText, int choirSize) {

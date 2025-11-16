@@ -1,14 +1,16 @@
+package team;
+
+import implementation.Show;
+
 import java.util.ArrayList;
 
 public class MusicalShow extends Show {
 
-    public String librettoText;
-    MusicAuthor musicAuthor;
+    protected String librettoText;
+    protected MusicAuthor musicAuthor;
 
     public MusicalShow(String title, int duration, Director director, ArrayList<Actor> listOfActors) {
         super(title, duration, director, listOfActors);
-        this.musicAuthor = musicAuthor;
-        this.librettoText = librettoText;
     }
 
     public void printLibrettoText() {
